@@ -11,13 +11,9 @@ import thunk from "redux-thunk";
 // logger from redux-logger
 import logger from "redux-logger";
 // rootReducer from ./reducers
-import { combineReducers } from "./reducers/index";
+import combineReducers from "./reducers";
 
-const store = createStore(
-  combineReducers,
-  /* applyMiddleware goes here */
-  applyMiddleware(thunk, logger)
-);
+const store = createStore(combineReducers, applyMiddleware(thunk, logger));
 
 ReactDOM.render(
   <Provider store={store}>
