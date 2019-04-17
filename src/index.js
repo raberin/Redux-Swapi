@@ -16,7 +16,7 @@ import { combineReducers } from "./reducers/index";
 const store = createStore(
   combineReducers,
   /* applyMiddleware goes here */
-  applyMiddleware(thunk)
+  applyMiddleware(thunk, logger)
 );
 
 ReactDOM.render(
